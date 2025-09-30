@@ -32,9 +32,9 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fopenmp -g -Wfatal-errors -Werror=unini
 
 set(CONST_TARGET_NAME "Multi_Dimension_View_Array")
 
-option(BUILD_LIBRARY "Build library instead of library executable" ON)
+option(MULTI_DIMENSION_VIEW_ARRAY___BUILD_LIBRARY "Build library instead of library executable" ON)
 
-if(BUILD_LIBRARY)
+if(MULTI_DIMENSION_VIEW_ARRAY___BUILD_LIBRARY)
     set(TARGET_NAME "${CONST_TARGET_NAME}")
     add_library(${TARGET_NAME} SHARED ${SOURCES})
     target_compile_definitions(${TARGET_NAME} PRIVATE LINUX)
@@ -54,9 +54,9 @@ else()
     # )
 endif()
 
-option(CTEST_ACTIVE "Testing is active" OFF)
+option(MULTI_DIMENSION_VIEW_ARRAY___CTEST_ACTIVE "Testing is active" OFF)
 
-if(CTEST_ACTIVE)
+if(MULTI_DIMENSION_VIEW_ARRAY___CTEST_ACTIVE)
 
     # Włączenie testów
     enable_testing()
